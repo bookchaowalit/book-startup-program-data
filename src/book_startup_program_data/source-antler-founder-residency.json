@@ -1,0 +1,37 @@
+{
+  "id": "antler-founder-residency",
+  "product": "book-startup-program-data",
+  "domain": "startup-program",
+  "schema_version": "startup_program.v1",
+  "fetch_url": "https://www.antler.co/pitch",
+  "source_url": "https://www.antler.co/pitch",
+  "access": "html",
+  "content_type": "text/html",
+  "category": "founder-residency",
+  "provider": "Antler",
+  "title": "Antler Residency",
+  "required_markers": ["get investment from antler", "apply"],
+  "generic_html": true,
+  "eligible_countries": [
+    "GLOBAL"
+  ],
+  "eligibility_text": "Antler founder residency application; location, visa, cohort and investment terms must be confirmed before applying.",
+  "value_kind": "in_kind",
+  "value_amount": null,
+  "value_currency": null,
+  "value_guaranteed": null,
+  "cost_notes": "The adapter records only public programme metadata. Confirm current eligibility, price, availability and terms at the official source.",
+  "normalized_terms": {
+    "startup_stage": "pre-seed",
+    "equity_required": null,
+    "incorporation_required": null
+  },
+  "enabled": true,
+  "permission_status": "reviewed-public-read",
+  "reviewed_at": "2026-09-08",
+  "permission_evidence": "https://www.antler.co/robots.txt",
+  "owner": "bookchaowalit",
+  "min_interval_seconds": 21600,
+  "retention": "private local raw archive; operational retention; no automatic deletion",
+  "use": "public startup-program metadata for personal discovery; no source-body republication"
+}

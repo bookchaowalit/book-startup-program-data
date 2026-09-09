@@ -1,0 +1,20 @@
+{
+  "domain": "startup-program",
+  "enabled_sources": [
+    "google-startups-accelerator-us",
+    "google-startup-school-incubator",
+    "entrepreneurs-first-venture-builder",
+    "antler-founder-residency",
+    "aws-activate-startup-perks"
+  ],
+  "enabled_category_capabilities": ["accelerator", "incubator", "venture-builder", "founder-residency", "startup-perks"],
+  "candidate_source_classes": [
+    "official program API or export",
+    "official RSS or announcement feed",
+    "official public program page"
+  ],
+  "permission_status": "reviewed-public-read",
+  "network_enabled": true,
+  "policy_file": "src/book_startup_program_data/source-google-startups-accelerator-us.json",
+  "notes": "Five manually invoked official sources are enabled with a six-hour minimum interval. Program availability, cohort dates, eligibility and investment terms must be rechecked before applying."
+}

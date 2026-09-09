@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-startup-program-data"
+version = "0.1.0"
+description = "Compare startup admission, stage requirements, equity and perks."
+requires-python = ">=3.10"
+dependencies = ["jsonschema==4.19.2"]
+
+[project.scripts]
+book-startup-program-data = "book_startup_program_data.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+book_startup_program_data = ["*.json"]

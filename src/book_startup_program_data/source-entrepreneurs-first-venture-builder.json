@@ -1,0 +1,40 @@
+{
+  "id": "entrepreneurs-first-venture-builder",
+  "product": "book-startup-program-data",
+  "domain": "startup-program",
+  "schema_version": "startup_program.v1",
+  "fetch_url": "https://www.joinef.com/",
+  "source_url": "https://www.joinef.com/",
+  "access": "html",
+  "content_type": "text/html",
+  "category": "venture-builder",
+  "provider": "Entrepreneurs First",
+  "title": "Entrepreneurs First founder programme",
+  "required_markers": [
+    "entrepreneurs first",
+    "founders"
+  ],
+  "generic_html": true,
+  "eligible_countries": [
+    "GLOBAL"
+  ],
+  "eligibility_text": "Entrepreneurs First founder-building programme; selection, location and investment terms are determined by the current official application.",
+  "value_kind": "in_kind",
+  "value_amount": null,
+  "value_currency": null,
+  "value_guaranteed": null,
+  "cost_notes": "The adapter records only public programme metadata. Confirm current eligibility, price, availability and terms at the official source.",
+  "normalized_terms": {
+    "startup_stage": "idea",
+    "equity_required": null,
+    "incorporation_required": null
+  },
+  "enabled": true,
+  "permission_status": "reviewed-public-read",
+  "reviewed_at": "2026-09-08",
+  "permission_evidence": "https://www.joinef.com/robots.txt",
+  "owner": "bookchaowalit",
+  "min_interval_seconds": 21600,
+  "retention": "private local raw archive; operational retention; no automatic deletion",
+  "use": "public startup-program metadata for personal discovery; no source-body republication"
+}

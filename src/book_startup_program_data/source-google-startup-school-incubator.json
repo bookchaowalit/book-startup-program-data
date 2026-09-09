@@ -1,0 +1,40 @@
+{
+  "id": "google-startup-school-incubator",
+  "product": "book-startup-program-data",
+  "domain": "startup-program",
+  "schema_version": "startup_program.v1",
+  "fetch_url": "https://startup.google.com/programs/startup-school/",
+  "source_url": "https://startup.google.com/programs/startup-school/",
+  "access": "html",
+  "content_type": "text/html",
+  "category": "incubator",
+  "provider": "Google for Startups",
+  "title": "Google for Startups Startup School",
+  "required_markers": [
+    "startup school",
+    "early-stage startup founders"
+  ],
+  "generic_html": true,
+  "eligible_countries": [
+    "GLOBAL"
+  ],
+  "eligibility_text": "Google Startup School guided trainings and workshops for early-stage startup founders; current programme availability and registration must be verified.",
+  "value_kind": "in_kind",
+  "value_amount": null,
+  "value_currency": null,
+  "value_guaranteed": null,
+  "cost_notes": "The adapter records only public programme metadata. Confirm current eligibility, price, availability and terms at the official source.",
+  "normalized_terms": {
+    "startup_stage": "any",
+    "equity_required": false,
+    "incorporation_required": null
+  },
+  "enabled": true,
+  "permission_status": "reviewed-public-read",
+  "reviewed_at": "2026-09-08",
+  "permission_evidence": "https://startup.google.com/robots.txt",
+  "owner": "bookchaowalit",
+  "min_interval_seconds": 21600,
+  "retention": "private local raw archive; operational retention; no automatic deletion",
+  "use": "public startup-program metadata for personal discovery; no source-body republication"
+}
