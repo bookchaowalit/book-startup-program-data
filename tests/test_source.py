@@ -30,7 +30,15 @@ class SourceTests(unittest.TestCase):
         self.assertEqual(item["value"], {"kind": "in_kind", "amount": None, "currency": None, "guaranteed": False})
         self.assertFalse(item["terms"]["equity_required"])
         self.assertIsNone(item["terms"]["incorporation_required"])
+        self.assertIsNone(item["terms"]["startup_stage"])  # "Seed to Series A" is not "any"
         self.assertEqual(validate(data)["schema_version"], source["schema_version"])
+
+    def test_markers_hidden_in_noscript_or_svg_do_not_count(self):
+        for wrapper in ("noscript", "svg", "script", "style"):
+            with self.subTest(wrapper=wrapper):
+                raw = f"<h1>Please enable JavaScript</h1><{wrapper}>".encode() + self.raw() + f"</{wrapper}>".encode()
+                with self.assertRaises(ValueError):
+                    normalize(raw, resource("source.json"), "2026-09-07T00:00:00Z")
 
     def test_source_drift_rejected(self):
         with self.assertRaises(ValueError):

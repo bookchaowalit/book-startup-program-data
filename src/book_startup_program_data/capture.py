@@ -18,11 +18,11 @@ class Text(HTMLParser):
         self.hidden = 0
 
     def handle_starttag(self, tag, attrs):
-        if tag in {"script", "style"}:
+        if tag in {"script", "style", "noscript", "svg"}:
             self.hidden += 1
 
     def handle_endtag(self, tag):
-        if tag in {"script", "style"}:
+        if tag in {"script", "style", "noscript", "svg"}:
             self.hidden = max(0, self.hidden - 1)
 
     def handle_data(self, value):
@@ -114,7 +114,10 @@ def normalize(raw, source, checked_at):
             ),
         },
         "terms": {
-            "startup_stage": "any",
+            # The page says "ideally from Seed to Series A": a soft range that no
+            # single contract stage captures, so the stage is not asserted ("any"
+            # would wrongly claim idea-stage startups qualify).
+            "startup_stage": None,
             "equity_required": False,
             "cohort_start": None,
             "incorporation_required": None,

@@ -1,6 +1,6 @@
 # Upgrade plan — book-startup-program-data
 
-Score: 6/10 -> 7.5/10 — four generic sources untested, PRODUCT.md said one source; no CI.
+Score: 6/10 -> 7.5/10 (pass 1) -> 7.5/10 (pass 2) — four generic sources untested, PRODUCT.md said one source; no CI.
 
 ## Backlog
 
@@ -14,7 +14,7 @@ Score: 6/10 -> 7.5/10 — four generic sources untested, PRODUCT.md said one sou
 - P2: Consider extracting the byte-identical `cli.py` shared by the sibling `book-*-data`
   products into one versioned package once a consumer exists (today each repo vendors it).
 
-## Done in this pass
+## Done in this pass (pass 1)
 
 - Added tests for the four generic sources (normalize + script-hidden markers rejected);
   moved the misplaced `normalize` docstring.
@@ -29,3 +29,15 @@ Score: 6/10 -> 7.5/10 — four generic sources untested, PRODUCT.md said one sou
   interval, `--source-id` traversal rejection, capture fail-closed without
   `SOLO_EMPIRE_ROOT`, CLI `validate` exit codes without echoing input, bad demo clock.
 - README: documented the developer/CI commands and offline test boundary.
+
+## Done in this pass (pass 2)
+
+- Data fix: the Google for Startups Accelerator record claimed `startup_stage: "any"` while
+  the page says "ideally from Seed to Series A"; no single contract stage fits, so it is now
+  `null` (not asserted). Regression assertion added.
+- Drift guard: the HTML text extractor now also ignores `<noscript>` and `<svg>` (as the
+  sibling creator/deal/learning/mobility/paid-study/partnership adapters do), so markers
+  hidden there no longer pass; test covers all four hidden containers.
+- Remaining P1s (cohort windows, AWS credit tiers) need reviewed live page content; not
+  attempted offline. `source.json` stays content-identical to
+  `source-google-startups-accelerator-us.json` (asserted by `tests/test_policy.py`).
