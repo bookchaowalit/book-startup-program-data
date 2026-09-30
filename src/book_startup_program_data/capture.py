@@ -60,9 +60,9 @@ def _normalize_generic(raw, source, checked_at):
 
 
 def normalize(raw, source, checked_at):
+    """Turn the public program page into a conservative startup-program record."""
     if source.get('generic_html'):
         return _normalize_generic(raw, source, checked_at)
-    """Turn the public program page into a conservative startup-program record."""
     if source["id"] != "google-startups-accelerator-us":
         raise ValueError("unknown startup program source")
     parser = Text()
