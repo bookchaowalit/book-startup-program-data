@@ -1,10 +1,10 @@
 # Upgrade plan — book-startup-program-data
 
-Score: 6/10 -> 7.5/10 (pass 1) -> 7.5/10 (pass 2) — four generic sources untested, PRODUCT.md said one source; no CI.
+Score: **7.5/10** (6 -> 7.5 in pass 1; unchanged in passes 2-4). Offline contract, adapters and CLI have offline tests and lint wired into CI (runs not yet confirmed green, see P0); live capture, source permission and consumers remain unverified by design. Before pass 1: four generic sources untested, PRODUCT.md said one source; no CI.
 
 ## Backlog
 
-- P0: Confirm the new GitHub Actions CI is green on the first push and keep it required.
+- P0: Confirm GitHub Actions `CI` is green on `claude/untitled-session-bhlj06`. The branch is pushed, but every run so far ended within ~5 s with no job logs (runner never started, not a test failure); check the account's Actions/billing settings, then re-run.
 - P1: Capture current cohort/application windows (Antler, EF) as `fixed` deadlines only
   when the page states an exact date and timezone.
 - P1: Model AWS Activate credit tiers as `value.kind = credit` with explicit USD amounts.
